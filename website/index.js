@@ -126,7 +126,7 @@ let globals = () => {
     header.get(0).innerHTML = (`
         <div class=header>
         <img class="header-logo" onclick="window.location.href = 'https://www.mineplex.com/'"
-            alt="E-Date Plex" src="./static/logo.png">
+            alt="E-Date Plex" src="static/logo.png">
         </div>
     `);
 
