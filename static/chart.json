@@ -1,0 +1,64 @@
+{
+  "options": {
+    "charts": {
+      "style": {
+        "fontFamily": "proxima-nova"
+      }
+    }
+  },
+  "credits": {
+    "enabled": false
+  },
+  "chart": {
+    "type": "line",
+    "backgroundColor": "rgba(255,0,0,0)",
+    "height": "200px",
+    "animation": {
+      "duration": 1000
+    },
+    "style": {
+      "fontFamily": "proxima-nova"
+    }
+  },
+  "title": {
+    "style": {
+      "color": "#ffffff",
+      "fontSize": "25px"
+    },
+    "text": "Server Ping Time",
+    "align": "left",
+    "margin": 30
+  },
+  "xAxis": {
+    "type": "datetime",
+    "lineColor": "transparent"
+  },
+  "yAxis": {
+    "opposite": true,
+    "lineColor": "rgba(51, 51, 51, 0.8)",
+    "title": {
+      "enabled": false
+    },
+    "gridLineColor": "rgba(51, 51, 51, 0.8)"
+  },
+  "tooltip": {
+    "valueSuffix": " ms",
+    "borderColor": "transparent"
+  },
+  "plotOptions": {
+    "line": {
+      "color": "#e87e0d",
+      "width": "2px",
+      "marker": {
+        "enabled": false
+      }
+    }
+  },
+  "series": [
+    {
+      "showInLegend": false,
+      "name": "Ping",
+      "data": []
+    }
+  ]
+}

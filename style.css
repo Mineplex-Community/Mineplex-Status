@@ -1,0 +1,286 @@
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaLight-f0b2f7c12b6b87c65c02d3c1738047ea67a7607fd767056d8a2964cc6a2393f7.eot?host=status.hypixel.net');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaLight-f0b2f7c12b6b87c65c02d3c1738047ea67a7607fd767056d8a2964cc6a2393f7.eot?host=status.hypixel.net#iefix') format('embedded-opentype'),
+    url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaLight-e642ffe82005c6208632538a557e7f5dccb835c0303b06f17f55ccf567907241.woff?host=status.hypixel.net') format('woff'),
+    url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaLight-0f094da9b301d03292f97db5544142a16f9f2ddf50af91d44753d9310c194c5f.ttf?host=status.hypixel.net') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegular-366d17769d864aa72f27defaddf591e460a1de4984bb24dacea57a9fc1d14878.eot?host=status.hypixel.net');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegular-366d17769d864aa72f27defaddf591e460a1de4984bb24dacea57a9fc1d14878.eot?host=status.hypixel.net#iefix') format('embedded-opentype'),
+    url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegular-2ee4c449a9ed716f1d88207bd1094e21b69e2818b5cd36b28ad809dc1924ec54.woff?host=status.hypixel.net') format('woff'),
+    url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegular-a40a469edbd27b65b845b8000d47445a17def8ba677f4eb836ad1808f7495173.ttf?host=status.hypixel.net') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegularIt-0bf83a850b45e4ccda15bd04691e3c47ae84fec3588363b53618bd275a98cbb7.eot?host=status.hypixel.net');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegularIt-0bf83a850b45e4ccda15bd04691e3c47ae84fec3588363b53618bd275a98cbb7.eot?host=status.hypixel.net#iefix') format('embedded-opentype'),
+    url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegularIt-0c394ec7a111aa7928ea470ec0a67c44ebdaa0f93d1c3341abb69656cc26cbdd.woff?host=status.hypixel.net') format('woff'),
+    url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegularIt-9e43859f8015a4d47d9eaf7bafe8d1e26e3298795ce1f4cdb0be0479b8a4605e.ttf?host=status.hypixel.net') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaSemibold-09566917307251d22021a3f91fc646f3e45f8d095209bcd2cded8a1979f06e54.eot?host=status.hypixel.net');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaSemibold-09566917307251d22021a3f91fc646f3e45f8d095209bcd2cded8a1979f06e54.eot?host=status.hypixel.net#iefix') format('embedded-opentype'),
+    url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaSemibold-86724fb2152613d735ba47c3f47a9ad2424b898bea4bece213dacee40344f966.woff?host=status.hypixel.net') format('woff'),
+    url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaSemibold-cf3e4eb7fbdf6fb83e526cc2a0141e55b01097e6e1abfd4cbdc3eda75d183f74.ttf?host=status.hypixel.net') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaBold-622ea489d20e12e691663f83217105e957e2d3d09703707d40155a29c06cc9d9.eot?host=status.hypixel.net');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaBold-622ea489d20e12e691663f83217105e957e2d3d09703707d40155a29c06cc9d9.eot?host=status.hypixel.net#iefix') format('embedded-opentype'),
+    url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaBold-c8dc577ff7f76d2fc199843e38c04bb2e9fd15889421358d966a9f846c2ed1cd.woff?host=status.hypixel.net') format('woff'),
+    url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaBold-27177fe9242acbe089276ee587feef781446667ffe9b6fdc5b7fe21ad73e12f3.ttf?host=status.hypixel.net') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    background-color: #1a1a1a;
+    font-family: proxima-nova, sans-serif;
+}
+
+.header {
+    /*noinspection CssFloatPxLength*/
+    filter: blur(0.5px);
+    max-width: 100%;
+    background-image: radial-gradient(80% 100% at top, rgba(22, 26, 26, 0.1), rgba(22, 26, 26, 0.1), rgba(26, 26, 26, 1)), url("https://i.imgur.com/dQb8igZ.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 6%;
+    overflow-x: hidden;
+}
+
+.footerCredits {
+    float: right;
+    bottom: 1%;
+    font-size: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.footerCreditsText {
+    color: #3e3e3e;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.creditsURL:hover {
+    color: #585858;
+}
+
+.affiliateText {
+    color: #ececec;
+    font-size: 17px;
+}
+
+strong.affiliateHeader {
+    font-size: 20px;
+    color: #d0780f;
+
+}
+
+a.affiliateLink {
+    display: inline;
+    text-decoration: none;
+    color: #d0780f
+}
+
+a.affiliateLink:hover {
+    color: #e37805;
+    transition: 0.1s;
+}
+
+button.affiliateButton {
+    background-color: #d0780f;
+    font-weight: 300;
+    font-size: 18px;
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    box-shadow: 3px 3px #db5101;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+button.affiliateButton:hover {
+    background-color: #bb5d0c;
+}
+
+@keyframes updown {
+    0% {
+        transform: translate(-50%, -60%);
+    }
+
+    50% {
+        transform: translate(-50%, -61%);
+    }
+
+    100% {
+        transform: translate(-50%, -60%);
+    }
+}
+
+
+.header-logo {
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    max-width: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transform: translate(-50%, -61%);
+    --aspect-ratio: 2.35;
+    cursor: pointer;
+    animation: updown 4s ease infinite;
+
+}
+
+.container {
+    margin: auto;
+    padding-top: 50px;
+    width: 90%;
+    max-width: 750px;
+    z-index: 10;
+}
+
+.boxWrapper {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #1f1f1f;
+    margin: -4px;
+    border: 1px solid #3d3b3b;
+    border-radius: 5px;
+}
+
+.statusBreakdownItem {
+    border-bottom: 1px solid #3d3b3b;
+    padding: 3%;
+}
+
+.componentName {
+    color: whitesmoke;
+    font-size: 20px;
+    line-height: 10px;
+}
+
+.componentStatus {
+    color: #767676;
+    font-size: 17px;
+    float: right;
+}
+
+.componentStatusLoading {
+    color: #686868;
+    font-size: 17px;
+    float: left;
+}
+
+.statusSummary {
+    background-color: #383838;
+    padding: 15px 15px 15px 15px;
+    border-radius: 8px;
+    font-size: 22px;
+    color: whitesmoke;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.statusSummaryLoading:after {
+    display: inline-block;
+    animation: dotty steps(1, end) 3s infinite;
+    content: '';
+}
+
+
+.componentStatusLoading:after {
+    display: inline-block;
+    animation: dotty steps(1, end) 3s infinite;
+    content: '';
+}
+
+@keyframes dotty {
+    0% {
+        content: '';
+    }
+    25% {
+        content: '.';
+    }
+    50% {
+        content: '..';
+    }
+    75% {
+        content: '...';
+    }
+    100% {
+        content: '';
+    }
+}
+
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.metricsContainer {
+    margin-top: 5%;
+    color: whitesmoke;
+}
+
+.metricsTitle {
+    font-size: 30px;
+}
+
+.metricsSelectors {
+    float: right;
+    margin-top: 1%;
+}
+
+.metricsSelector {
+    text-decoration: none;
+    font-size: 19px;
+    color: rgba(160, 158, 158, 0.8);
+    border-right: 1px solid rgba(57, 57, 57, 0.8);
+    padding-right: 10px;
+    padding-left: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.metricsSelector:hover {
+    color: #e87e0d;
+}
+
+.metricsSelector.selected {
+    color: white;
+}
+

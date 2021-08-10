@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Settings -->
+    <meta charset="UTF-8">
+    <title>Mineplex Status</title>
+
+    <!-- Styles -->
+    <link rel="icon" href="static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+</head>
+
+<body onload="initialize()" style="display: none" class="background">
+<div id="header" onload=""></div>
+
+<div class="container">
+
+    <div class="boxWrapper">
+        <div style="padding: 5px; margin: 30px; border-bottom: none">
+            <span class="affiliateText">
+                <strong class="affiliateHeader">Who made this super sexy site?</strong>
+                <br>
+                <br>
+                This Mineplex status page was created for educational purposes by two morons/high school students
+                over the course of a weekend, looking to expand their knowledge in JavaScript (for the website) and Java
+                (for the backend API) through a simple, but useful project.
+                <br>
+                <br>
+                Like most of our projects, the Mineplex Status Page is (mostly) open source. Unfortunately, since our API uses
+                private access tokens (and due to a lack of wanting to remove them), it is not publicly visible. However,
+                you can <a class="affiliateLink" href="https://github.com/Mineplex-Community/Status">view the source code</a> to this website on GitHub.
+                <br>
+                <br>
+                If you want to get in contact with us for whatever reason (to report issues, suggest features, or help out), we'd love to have you.
+                Go ahead and
+                <a class="affiliateLink" href="https://www.mineplex.com/groups/.427/">send us a message </a>
+                through the Mineplex Forums and we'll get back to you when we can (hopefully).
+                <br>
+                <br>
+                We hope you enjoy our site,
+                <br>
+                - Rey & Fallen
+                <br>
+                <br>
+            </span>
+            <button id="homeButton" onclick="window.location.href = 'index.html'" class="affiliateButton">
+                Return Home
+            </button>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

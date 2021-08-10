@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Settings -->
+    <meta charset="UTF-8" name="Mineplex Status Page" content="Get updates on Mineplex's Java & Bedrock Server, Website, and Store with the click of a button.">
+    <title>Mineplex Status</title>
+
+    <!-- Styles -->
+    <link rel="icon" href="static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.13/moment-timezone-with-data-2012-2022.min.js"></script>
+
+</head>
+
+<body onload="initialize()" style="display: none" class="background">
+<div id="header" onload=""></div>
+
+<div class="container">
+
+    <!-- Summary for all statuses -->
+    <div class="statusSummary statusSummaryLoading">Pinging Data</div>
+
+    <!-- Rough list of all platforms & their statuses -->
+    <div class="boxWrapper">
+        <div class="statusBreakdownItem">
+            <span class="componentName">Java Network</span>
+            <span class="componentStatus" id="javaNetworkStatus">Pinging Data...</span>
+        </div>
+        <div class="statusBreakdownItem">
+            <span class="componentName">Bedrock Network (US)</span>
+            <span class="componentStatus" id="bedrockNetworkUSStatus">Pinging Data...</span>
+        </div>
+        <div class="statusBreakdownItem">
+            <span class="componentName">Bedrock Network (EU)</span>
+            <span class="componentStatus" id="bedrockNetworkEUStatus">Pinging Data...</span>
+        </div>
+        <div class="statusBreakdownItem">
+            <span class="componentName">Website</span>
+            <span class="componentStatus" id="websiteStatus">Pinging Data...</span>
+        </div>
+        <div class="statusBreakdownItem" style="border-bottom: none">
+            <span class="componentName">Store</span>
+            <span class="componentStatus" id="storeStatus">Pinging Data...</span>
+        </div>
+    </div>
+
+    <!-- Ping metrics for the Java Network -->
+    <div class="metricsContainer">
+        <span class="metricsTitle">Java Metrics</span>
+        <div class="metricsSelectors">
+            <a href="#" id="javaDay" class="metricsSelector selected">Day</a>
+            <a href="#" id="javaWeek" class="metricsSelector">Week</a>
+            <a href="#" id="javaMonth" class="metricsSelector" style="border-right: none">Month</a>
+        </div>
+        <div class="boxWrapper" style="margin-top: 3%">
+            <div class="statusBreakdownItem" id="javaMetrics">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Ping metrics for the Bedrock Network -->
+    <div class="metricsContainer">
+        <span class="metricsTitle">Bedrock Metrics</span>
+        <div class="metricsSelectors">
+            <a href="#" id="bedrockDay" class="metricsSelector selected">Day</a>
+            <a href="#" id="bedrockWeek" class="metricsSelector">Week</a>
+            <a href="#" id="bedrockMonth" class="metricsSelector" style="border-right: none">Month</a>
+        </div>
+        <div class="boxWrapper" style="margin-top: 3%">
+            <div class="statusBreakdownItem" id="bedrockMetrics">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="footer"></div>
+</body>
+</html>
