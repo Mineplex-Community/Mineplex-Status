@@ -272,6 +272,8 @@ button.affiliateButton:hover {
 }
 
 .metricsSelectors {
+    overflow: hidden;
+    z-index: 0;
     float: right;
     margin-top: 1%;
 }

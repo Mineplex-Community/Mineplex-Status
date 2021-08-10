@@ -1,6 +1,48 @@
-let dynamicHeader = () => {
-    let height = Math.min(300, window.innerWidth * 0.4)
-    $(".header").css("height", `${height}px`)
+let dynamicResizing = () => {
+    let header = $(".header");
+    let metricsTitle = $(".metricsTitle");
+    let metricsTitleCount = $(".metricsTitleCount");
+    let metricsTitleCountLoading = $(".metricsTitleCountLoading");
+    let metricsSelector = $(".metricsSelector");
+    let componentName = $(".componentName");
+    let componentStatus = $(".componentStatus");
+
+    console.log(window.innerWidth)
+    header.css("height", `${Math.min(300, window.innerWidth * 0.4)}px`)
+
+    if (window.innerWidth < 660) {
+
+        // Make stuff smaller
+        metricsTitle.css("font-size", "20px");
+        metricsTitleCount.css("font-size", "13px");
+        metricsTitleCountLoading.css("font-size", "13px");
+        metricsSelector.css("font-size", "13px");
+        componentName.css("font-size", "15px");
+        componentStatus.css("font-size", "13px");
+
+        // Hide the title count
+        if (window.innerWidth < 450) metricsTitleCount.css("display", "none")
+        else metricsTitleCount.css("display", "");
+
+        // Hide the size selector
+        if (window.innerWidth < 350) metricsSelector.css("display", "none")
+        else metricsSelector.css("display", "");
+
+
+    } else {
+
+        // Make stuff bigger again
+        metricsTitle.css("font-size", "");
+        metricsTitleCount.css('font-size', "");
+        metricsTitleCount.css('display', "");
+        metricsTitleCountLoading.css("'font-size", "")
+        metricsSelector.css("font-size", "");
+        metricsSelector.css("display", "");
+        componentName.css("font-size", "");
+        componentStatus.css("font-size", "");
+
+    }
+
 }
 
 function waitForElement(querySelector, timeout = 0) {
@@ -51,7 +93,7 @@ let networkRequest = async (queries) => {
 }
 
 let generalStatuses = {
-    0: {color: "#7b0f0f", message: "Network Failing"},
+    0: {color: "#7b0f0f", message: "Service Failing"},
     1: {color: "#cb1e1e", message: "Extreme Issue"},
     2: {color: "#d47d13", message: "Mild Issues"},
     3: {color: "#2c7b3d", message: "Operational"}
@@ -78,7 +120,7 @@ let metricsTitles = [
 ]
 
 let globals = () => {
-    $(window).on('resize', () => dynamicHeader());
+    $(window).on('resize', () => dynamicResizing());
 
     let header = $("#header");
     header.get(0).innerHTML = (`
@@ -95,7 +137,7 @@ let globals = () => {
              * Dynamic Header Stuff
              */
             {
-                repeatWithDelay(dynamicHeader, 15, 50);
+                repeatWithDelay(dynamicResizing, 15, 50);
                 document.body.style.display = '';
             }
 
@@ -173,6 +215,8 @@ let initialize = (home) => {
                     platformCount = (platformCount > 1) ? `(${platformCount.toLocaleString()} Online)` : ``;
                     metricsTitleDOM.innerHTML = `${platform.prefix} <span class="metricsTitleCount">${platformCount}</span>`;
                 });
+
+                dynamicResizing();
 
 
             });
