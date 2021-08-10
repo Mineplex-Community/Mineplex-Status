@@ -3,29 +3,40 @@
 <head>
 
     <!-- Settings -->
-    <meta charset="UTF-8" name="Mineplex Status Page" content="Get updates on Mineplex's Java & Bedrock Server, Website, and Store with the click of a button.">
+    <meta charset="UTF-8" name="Mineplex Unofficial Status Page (Unofficial)" content="Get updates on Mineplex's Java & Bedrock Server, Website, and Store with the click of a button.">
     <title>Mineplex Status</title>
 
+    <meta property="og:site_name" content="Mineplex Status">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mineplex Status Page"/>
+    <meta property="og:description"
+          content="Get updates on Mineplex's Java & Bedrock Server, Website, and Store with the click of a button through this unofficial, community-driven and hosted website."
+    />
+    <meta property="og:url" content="https://status.mineplex.club/"/>
+    <meta property="og:image" content="https://status.mineplex.club/static/logo.png"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#d0780f">
+
     <!-- Styles -->
-    <link rel="icon" href="static/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./static/favicon.ico">
+    <link rel="stylesheet" href="./style.css?v=1">
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="./index.js?v=42069420"></script>
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.13/moment-timezone-with-data-2012-2022.min.js"></script>
 
 </head>
 
-<body onload="initialize()" style="display: none" class="background">
-<div id="header" onload=""></div>
+<body onload="initialize(true)" style="display: none" class="background">
+<div id="header"></div>
 
 <div class="container">
 
     <!-- Summary for all statuses -->
-    <div class="statusSummary statusSummaryLoading">Pinging Data</div>
+    <div id="statusSummary" class="statusSummary statusSummaryLoading">Pinging Data</div>
 
     <!-- Rough list of all platforms & their statuses -->
     <div class="boxWrapper">
@@ -53,7 +64,9 @@
 
     <!-- Ping metrics for the Java Network -->
     <div class="metricsContainer">
-        <span class="metricsTitle">Java Metrics</span>
+        <span id="javaMetricsTitle" class="metricsTitle">Java Metrics
+            <span class="metricsTitleCountLoading">(Pinging Data...)</span>
+        </span>
         <div class="metricsSelectors">
             <a href="#" id="javaDay" class="metricsSelector selected">Day</a>
             <a href="#" id="javaWeek" class="metricsSelector">Week</a>
@@ -68,7 +81,9 @@
 
     <!-- Ping metrics for the Bedrock Network -->
     <div class="metricsContainer">
-        <span class="metricsTitle">Bedrock Metrics</span>
+        <span id="bedrockMetricsTitle" class="metricsTitle">Bedrock Metrics
+            <span class="metricsTitleCountLoading">(Pinging Data...)</span>
+        </span>
         <div class="metricsSelectors">
             <a href="#" id="bedrockDay" class="metricsSelector selected">Day</a>
             <a href="#" id="bedrockWeek" class="metricsSelector">Week</a>
@@ -83,6 +98,13 @@
 
 </div>
 
-<div id="footer"></div>
+<div class="footer">
+    <div class="footerCredits footerCreditsText">
+        <a href="affiliate.html" class="footerCreditsText creditsURL">Affiliate Disclaimer</a>
+        •
+        <a href="credits.html" class="footerCreditsText creditsURL">Website Credits</a>
+    </div>
+
+</div>
 </body>
 </html>
